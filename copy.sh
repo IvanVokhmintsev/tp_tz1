@@ -1,3 +1,5 @@
+#!/bin/bash
+
 srcRepo=$1
 destRepo=$2
 
