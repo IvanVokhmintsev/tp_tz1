@@ -17,7 +17,7 @@ do
     fileDirectory=$(dirname "$filePath")
     # Реализована HashMap, подсчитывающая количество файлов по названию. При добавлении файла, значение инкрементируется.
     # Если в HashMap уже есть файл с таким названием, то перед названием файла при копировании дописывается цифра в скобках
-    if [ "${copiedFiles[$fileName]}" ]
+    if [[ "${copiedFiles[$fileName]}" ]]
     then
         counter=${copiedFiles[$fileName]}
         cp $filePath $destRepo/"($counter) "$fileName
