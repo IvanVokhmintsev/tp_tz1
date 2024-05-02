@@ -1,8 +1,11 @@
-#!/bin/bash
-
 srcRepo=$1
 destRepo=$2
 
+if [[ $# -ne 2 ]]
+then
+    echo "Неверное количество аргументов"
+    exit 0
+fi
 
 IFS=$'\n'
 readarray -d '' files < <(find $srcRepo -mindepth 1  -maxdepth 1 -type f) # получение списка всех файлов, находящихся непосредственно во входной директории
